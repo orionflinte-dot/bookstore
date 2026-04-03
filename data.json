@@ -1,0 +1,423 @@
+[
+{
+  "model": "store.category",
+  "pk": 1,
+  "fields": {
+    "name": "Fiction",
+    "slug": "fiction",
+    "description": "Fictional stories to melt your mind."
+  }
+},
+{
+  "model": "store.category",
+  "pk": 2,
+  "fields": {
+    "name": "Science Fiction",
+    "slug": "science-fiction",
+    "description": "Explore the unknown."
+  }
+},
+{
+  "model": "store.category",
+  "pk": 3,
+  "fields": {
+    "name": "Design & Art",
+    "slug": "design-art",
+    "description": "Beautiful design books."
+  }
+},
+{
+  "model": "store.category",
+  "pk": 4,
+  "fields": {
+    "name": "Fantasy",
+    "slug": "fantasy",
+    "description": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 5,
+  "fields": {
+    "name": "Comics",
+    "slug": "comics",
+    "description": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 6,
+  "fields": {
+    "name": "Indian Fiction",
+    "slug": "indian-fiction",
+    "description": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 7,
+  "fields": {
+    "name": "Kids Stories",
+    "slug": "kids-stories",
+    "description": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 8,
+  "fields": {
+    "name": "Classics",
+    "slug": "classics",
+    "description": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 9,
+  "fields": {
+    "name": "Digital E-Books",
+    "slug": "digital-e-books",
+    "description": null
+  }
+},
+{
+  "model": "store.book",
+  "pk": 5,
+  "fields": {
+    "category": 1,
+    "title": "Frankenstein",
+    "author": "MARY SHELLEY",
+    "description": "Frankenstein - Fiction Novel\r\n15 Years+, 256 Pages, “Mary Shelley’s ‘Frankenstein’ explores the consequences of Victor Frankenstein’s daring act of creating life from corpses. As he grapples with his creation and its repercussions, themes of human connection and alienation emerge in this seminal work of science fiction. Shelley’s tale continues to captivate readers with its profound exploration of ambition and its consequences.”",
+    "price": "148.00",
+    "cover_image": "books/FRANKESTEIN.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 5,
+    "is_active": true,
+    "created_at": "2026-04-02T17:12:14.361Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 6,
+  "fields": {
+    "category": 4,
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "description": "The boy who lived.",
+    "price": "499.00",
+    "cover_image": "books/har_p_1.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 5,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:38.705Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 7,
+  "fields": {
+    "category": 4,
+    "title": "Harry Potter and the Chamber of Secrets",
+    "author": "J.K. Rowling",
+    "description": "Enemies of the heir, beware.",
+    "price": "499.00",
+    "cover_image": "books/har_p_2.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 5,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:39.219Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 8,
+  "fields": {
+    "category": 4,
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "author": "J.K. Rowling",
+    "description": "The Dementors are coming.",
+    "price": "549.00",
+    "cover_image": "books/hary_azka.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 5,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:39.626Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 9,
+  "fields": {
+    "category": 4,
+    "title": "Harry Potter and the Goblet of Fire",
+    "author": "J.K. Rowling",
+    "description": "The Triwizard Tournament.",
+    "price": "699.00",
+    "cover_image": "books/harp_goblet_of_fire.jpeg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 5,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:40.135Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 12,
+  "fields": {
+    "category": 4,
+    "title": "Harry Potter and the Deathly Hallows",
+    "author": "J.K. Rowling",
+    "description": "The epic conclusion.",
+    "price": "899.00",
+    "cover_image": "books/hary_hallows.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 5,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:41.468Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 13,
+  "fields": {
+    "category": 5,
+    "title": "Batman: The Killing Joke",
+    "author": "Alan Moore",
+    "description": "One bad day can drive a man crazy.",
+    "price": "1200.00",
+    "cover_image": "books/batman_killing_joke.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 5,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:41.995Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 14,
+  "fields": {
+    "category": 5,
+    "title": "Superman: Red Son",
+    "author": "Mark Millar",
+    "description": "What if Superman was raised in the Soviet Union?",
+    "price": "999.00",
+    "cover_image": "books/Supermanredson.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 8,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:42.493Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 15,
+  "fields": {
+    "category": 5,
+    "title": "Spider-Man: Kraven's Last Hunt",
+    "author": "J.M. DeMatteis",
+    "description": "A grim and iconic Spider-Man tale.",
+    "price": "1100.00",
+    "cover_image": "books/spdman_krevens.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 9,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:43.005Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 16,
+  "fields": {
+    "category": 5,
+    "title": "Iron Man: Extremis",
+    "author": "Warren Ellis",
+    "description": "The future of Tony Stark.",
+    "price": "1050.00",
+    "cover_image": "books/iron_extremis.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 8,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:43.411Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 17,
+  "fields": {
+    "category": 6,
+    "title": "The Blue Umbrella",
+    "author": "Ruskin Bond",
+    "description": "A beautiful story of a young girl in the hills.",
+    "price": "150.00",
+    "cover_image": "books/blue_umb.webp",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 8,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:43.926Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 18,
+  "fields": {
+    "category": 8,
+    "title": "The Room on the Roof",
+    "author": "Ruskin Bond",
+    "description": "A coming-of-age story of an orphaned English boy in India.",
+    "price": "250.00",
+    "cover_image": "books/room_on_roof.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 7,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:44.440Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 19,
+  "fields": {
+    "category": 6,
+    "title": "A Flight of Pigeons",
+    "author": "Ruskin Bond",
+    "description": "Set against the backdrop of the 1857 rebellion.",
+    "price": "199.00",
+    "cover_image": "books/flight.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 6,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:44.951Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 20,
+  "fields": {
+    "category": 7,
+    "title": "Grandma's Bag of Stories",
+    "author": "Sudha Murty",
+    "description": "Magical tales featuring kings, monkeys, and princesses.",
+    "price": "200.00",
+    "cover_image": "books/grndma_stories.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 8,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:45.337Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 21,
+  "fields": {
+    "category": 6,
+    "title": "Wise and Otherwise",
+    "author": "Sudha Murty",
+    "description": "A salute to human nature in all its forms.",
+    "price": "250.00",
+    "cover_image": "books/wise.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 5,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:45.676Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 22,
+  "fields": {
+    "category": 6,
+    "title": "How I Taught My Grandmother to Read",
+    "author": "Sudha Murty",
+    "description": "Heartwarming stories from real life.",
+    "price": "210.00",
+    "cover_image": "books/read_grnd.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 7,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:45.871Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 23,
+  "fields": {
+    "category": 7,
+    "title": "Panchatantra",
+    "author": "Vishnu Sharma",
+    "description": "Ancient Indian fables featuring animals.",
+    "price": "300.00",
+    "cover_image": "books/panch.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 8,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:46.045Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 24,
+  "fields": {
+    "category": 7,
+    "title": "The Very Hungry Caterpillar",
+    "author": "Eric Carle",
+    "description": "A classic picture book for young children.",
+    "price": "450.00",
+    "cover_image": "books/huncat.jpg",
+    "is_ebook": false,
+    "e_book_file": "",
+    "stock": 7,
+    "is_active": true,
+    "created_at": "2026-04-02T18:02:46.256Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 28,
+  "fields": {
+    "category": 9,
+    "title": "Django Advanced Guide (eBook)",
+    "author": "Mason Jones",
+    "description": "Deep dive into Django structure.",
+    "price": "499.00",
+    "cover_image": "books/django_advance_book.jpg",
+    "is_ebook": true,
+    "e_book_file": "ebooks/sample_ebook_KPv6CpJ.pdf",
+    "stock": 12,
+    "is_active": true,
+    "created_at": "2026-04-02T18:05:09.880Z"
+  }
+},
+{
+  "model": "store.book",
+  "pk": 29,
+  "fields": {
+    "category": 9,
+    "title": "Startup Funding 101 (eBook)",
+    "author": "Nicolaj Hejer Neilson",
+    "description": "How to pitch and win investments.",
+    "price": "399.00",
+    "cover_image": "books/startfund.jpg",
+    "is_ebook": true,
+    "e_book_file": "ebooks/sample_ebook_vf0w14U.pdf",
+    "stock": 9,
+    "is_active": true,
+    "created_at": "2026-04-02T18:05:10.316Z"
+  }
+}
+]
