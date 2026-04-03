@@ -97,24 +97,9 @@ def signup_view(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save(commit=False)
-            user.is_active = False # Deactivate account till it is confirmed
-            user.save()
-            
-            # Send Email Verification
-            current_site = get_current_site(request)
-            mail_subject = 'Activate your Aura Books account.'
-            message = render_to_string('store/acc_active_email.html', {
-                'user': user,
-                'domain': current_site.domain,
-                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-                'token': default_token_generator.make_token(user),
-            })
-            to_email = form.cleaned_data.get('username') # fallback if no email field in UserCreationForm
-            email = EmailMessage(mail_subject, message, to=[to_email])
-            email.send()
-            
-            return render(request, 'store/check_email.html', {})
+            user = form.save()
+            login(request, user)
+            return redirect('store:home')
     else:
         form = UserCreationForm()
     return render(request, 'store/signup.html', {'form': form})
