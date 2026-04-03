@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ book.title }} - Aura Books{% endblock %}
+
+{% block content %}
+<div class="glass" style="display: flex; flex-wrap: wrap; gap: 3rem; padding: 2.5rem;">
+    <div style="flex: 1; min-width: 300px; max-width: 400px;">
+        {% if book.cover_image %}
+        <img src="{{ book.cover_image.url }}" alt="{{ book.title }}" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+        {% endif %}
+    </div>
+    <div style="flex: 2; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+        <span style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">{{ book.category.name }}</span>
+        <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">{{ book.title }}</h1>
+        <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem;">by {{ book.author }}</p>
+        
+        <div style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2.5rem; color: var(--text-main);">
+            {{ book.description|linebreaks }}
+        </div>
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 2rem; border-top: 1px solid var(--surface-border);">
+            <div style="font-size: 2.5rem; font-weight: 800;">₹{{ book.price }}</div>
+            <div style="display: flex; gap: 1rem;">
+                {% if book.e_book_file %}
+                    <a href="{{ book.e_book_file.url }}" target="_blank" class="btn btn-outline" style="font-size: 1.1rem; padding: 1rem 2rem;">Read eBook</a>
+                {% endif %}
+                <form action="{% url 'store:add_to_cart' book.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                        Add to Cart
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

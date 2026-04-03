@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Aura Books{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+
+    <nav class="navbar glass">
+        <a href="{% url 'store:home' %}" class="nav-brand">Aura Books.</a>
+        <div class="nav-links">
+            <form action="{% url 'store:book_list' %}" method="get" style="display: flex; gap: 0.5rem; align-items: center;">
+                <input type="text" name="q" placeholder="Search books..." class="form-control" style="margin: 0; padding: 0.5rem; width: 200px; font-size: 0.9rem;" value="{{ search_query|default:'' }}">
+                <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem;">Search</button>
+            </form>
+            <a href="{% url 'store:book_list' %}" class="nav-link">Explore</a>
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'store:cart_detail' %}" class="nav-link">Cart</a>
+                <a href="{% url 'store:logout' %}" class="btn btn-outline" style="padding: 0.5rem 1rem;">Logout</a>
+            {% else %}
+                <a href="{% url 'store:cart_detail' %}" class="nav-link">Cart</a>
+                <a href="{% url 'store:login' %}" class="btn btn-outline" style="padding: 0.5rem 1rem;">Log In</a>
+                <a href="{% url 'store:signup' %}" class="btn btn-primary" style="padding: 0.5rem 1rem;">Sign Up</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Aura Books. Crafted beautifully for you.</p>
+    </footer>
+
+</body>
+</html>

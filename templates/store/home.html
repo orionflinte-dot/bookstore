@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Aura Books{% endblock %}
+
+{% block content %}
+<section class="hero glass">
+    <h1>Read the extraordinary.</h1>
+    <p>Discover a curated collection of literary masterpieces, beautiful typography, and mesmerizing stories that will captivate your mind.</p>
+    <a href="{% url 'store:book_list' %}" class="btn btn-primary">Start Exploring</a>
+</section>
+
+<div style="margin-bottom: 2rem;">
+    <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">Featured Arrivals</h2>
+    <div class="book-grid">
+        {% for book in featured_books %}
+        <div class="book-card glass">
+            {% if book.cover_image %}
+            <img src="{{ book.cover_image.url }}" alt="{{ book.title }}" class="book-cover">
+            {% endif %}
+            <div class="book-info">
+                <h3 class="book-title">{{ book.title }}</h3>
+                <p class="book-author">by {{ book.author }}</p>
+                <div class="book-price">
+                    <span>₹{{ book.price }}</span>
+                    <a href="{% url 'store:book_detail' book.id %}" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No featured books at the moment.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

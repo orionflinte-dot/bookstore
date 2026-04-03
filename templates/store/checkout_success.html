@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Checkout Success - Aura Books{% endblock %}
+
+{% block content %}
+<div class="glass" style="max-width: 600px; margin: 4rem auto; padding: 4rem 2rem; text-align: center;">
+    <div style="font-size: 4rem; margin-bottom: 1rem;">🎉</div>
+    <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: var(--primary);">Thank You!</h1>
+    <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem;">Your order has been placed successfully. Get ready to dive into the stories.</p>
+    <a href="{% url 'store:home' %}" class="btn btn-primary">Return Home</a>
+</div>
+{% endblock %}

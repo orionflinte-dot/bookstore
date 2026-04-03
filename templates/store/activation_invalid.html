@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Activation Invalid - Aura Books{% endblock %}
+
+{% block content %}
+<div class="glass" style="max-width: 600px; margin: 4rem auto; padding: 4rem 2rem; text-align: center;">
+    <div style="font-size: 4rem; margin-bottom: 1rem;">❌</div>
+    <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: var(--secondary);">Activation Link Invalid</h1>
+    <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem;">The activation link is invalid or has expired.</p>
+    <a href="{% url 'store:signup' %}" class="btn btn-primary">Try Signing Up Again</a>
+</div>
+{% endblock %}

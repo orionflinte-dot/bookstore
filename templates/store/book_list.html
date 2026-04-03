@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}All Books - Aura Books{% endblock %}
+
+{% block content %}
+<div style="display: flex; gap: 2rem;">
+    <aside style="width: 250px;" class="glass">
+        <div style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 1rem; font-weight: 700;">Categories</h3>
+            <ul style="list-style: none;">
+                <li style="margin-bottom: 0.5rem;"><a href="{% url 'store:book_list' %}" style="display: block; padding: 0.5rem; border-radius: 8px; transition: var(--transition);" class="nav-link">All Books</a></li>
+                {% for category in categories %}
+                <li style="margin-bottom: 0.5rem;">
+                    <a href="?category={{ category.slug }}" style="display: block; padding: 0.5rem; border-radius: 8px; transition: var(--transition);" class="nav-link">{{ category.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </aside>
+
+    <div style="flex: 1;">
+        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem;">Explore Collection</h2>
+        <div class="book-grid">
+            {% for book in books %}
+            <div class="book-card glass">
+                {% if book.cover_image %}
+                <img src="{{ book.cover_image.url }}" alt="{{ book.title }}" class="book-cover">
+                {% endif %}
+                <div class="book-info">
+                    <h3 class="book-title">{{ book.title }}</h3>
+                    <p class="book-author">by {{ book.author }}</p>
+                    <div class="book-price">
+                        <span>₹{{ book.price }}</span>
+                        <a href="{% url 'store:book_detail' book.id %}" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View</a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="glass" style="padding: 2rem; grid-column: 1 / -1; text-align: center;">
+                <p>No books found in this category.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
